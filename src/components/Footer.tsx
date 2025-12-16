@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Instagram, Facebook, Youtube, Mail, Phone } from "lucide-react";
+import { Instagram, Facebook, Youtube } from "lucide-react";
+import logoPrefeitura from "@/assets/logo-prefeitura-aracati.png";
 
 const socialLinks = [
   { icon: Instagram, href: "#", label: "Instagram" },
@@ -22,14 +23,15 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="font-serif text-2xl font-medium mb-4">
-              <span className="text-gold-gradient">Final de Ano</span>
-              <br />
-              <span className="text-foreground">em Canoa Quebrada</span>
-            </h3>
-            <p className="font-sans text-muted-foreground text-sm leading-relaxed">
+            <img 
+              src={logoPrefeitura} 
+              alt="Prefeitura do Aracati" 
+              className="h-14 w-auto mb-4"
+            />
+            <p className="font-sans text-muted-foreground text-sm leading-relaxed max-w-xs">
+              Realização: Prefeitura Municipal de Aracati.
               Descubra Canoa Quebrada e encerre o ano em um dos destinos 
-              mais incríveis do Ceará. O Réveillon é o bônus!
+              mais incríveis do Ceará.
             </p>
           </motion.div>
 
