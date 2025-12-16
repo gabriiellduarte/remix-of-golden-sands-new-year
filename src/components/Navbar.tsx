@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Sun, Moon } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { usarTema } from "@/contexts/ThemeContext";
 import logoPrefeitura from "@/assets/logo-prefeitura-aracati.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const { tema, alternarTema } = usarTema();
 
   const navItems = [
     { label: t("nav.home"), href: "#" },
@@ -76,6 +78,16 @@ const Navbar = () => {
               <Globe className="w-4 h-4" />
               <span className="uppercase font-medium">{language}</span>
             </button>
+            <button
+              onClick={alternarTema}
+              className="flex items-center gap-2 px-3 py-2 rounded-full text-sm font-sans text-foreground/70 hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              aria-label={language === "pt" ? "Alternar tema" : "Toggle theme"}
+            >
+              {tema === "light" ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
+              <span className="uppercase font-medium">
+                {language === "pt" ? (tema === "light" ? "Claro" : "Escuro") : tema === "light" ? "Light" : "Dark"}
+              </span>
+            </button>
             <a
               href="#dicas"
               className="px-6 py-2.5 rounded-full text-sm font-sans font-medium bg-primary text-primary-foreground hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
@@ -92,6 +104,13 @@ const Navbar = () => {
               aria-label="Toggle language"
             >
               <Globe className="w-5 h-5" />
+            </button>
+            <button
+              onClick={alternarTema}
+              className="w-10 h-10 flex items-center justify-center text-foreground/70 hover:text-primary transition-colors"
+              aria-label={language === "pt" ? "Alternar tema" : "Toggle theme"}
+            >
+              {tema === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

@@ -17,9 +17,9 @@ const HeroSection = () => {
         >
           <source src="/hero-video2.mp4" type="video/mp4" />
         </video>
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
+        {/* Sobreposição clara para destacar o vídeo sem perder a leitura */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-background/90 dark:from-background/40 dark:via-background/60 dark:to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-transparent to-primary/10 dark:from-background/50 dark:via-transparent dark:to-background/50" />
       </div>
 
       {/* Content */}
