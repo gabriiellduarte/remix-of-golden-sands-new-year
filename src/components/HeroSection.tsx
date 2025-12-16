@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-beach.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Praia de Canoa Quebrada ao pôr do sol"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
