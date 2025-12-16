@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logoPrefeitura from "@/assets/logo-prefeitura-aracati.png";
 
 const navItems = [
   { label: "Início", href: "#" },
@@ -37,10 +38,13 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="font-serif text-xl font-medium">
-            <span className="text-gold-gradient">RCQ</span>
-            <span className="text-foreground/50 ml-1">2026</span>
+          {/* Logo Prefeitura */}
+          <a href="#" className="flex items-center gap-3">
+            <img 
+              src={logoPrefeitura} 
+              alt="Prefeitura do Aracati" 
+              className="h-10 md:h-12 w-auto"
+            />
           </a>
 
           {/* Desktop nav */}
