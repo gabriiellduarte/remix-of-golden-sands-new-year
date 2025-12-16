@@ -66,7 +66,7 @@ const HeroSection = () => {
         >
           Descubra as belezas de Canoa Quebrada e encerre o ano
           <br />
-          em um dos destinos mais incríveis do Ceará. O Réveillon é só o bônus!
+          em um dos destinos mais incríveis do Ceará.
         </motion.p>
 
         <motion.div

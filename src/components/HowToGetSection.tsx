@@ -4,12 +4,12 @@ import { MapPin, Navigation, Car } from "lucide-react";
 const routes = [
   {
     name: "Via BR-304",
-    description: "Vindo de Fortaleza pela BR-304",
+    description: "Vindo de Natal/Mossoró pela BR-304",
     link: "https://maps.google.com/?q=Estacionamento+Canoa+Quebrada",
   },
   {
     name: "Via CE-040",
-    description: "Vindo pela CE-040 (Litoral)",
+    description: "Vindo de Fortaleza pela CE-040 (Litoral)",
     link: "https://maps.google.com/?q=Estacionamento+Canoa+Quebrada",
   },
 ];
@@ -18,17 +18,17 @@ const meetingPoints = [
   {
     name: "Central de Turismo",
     description: "Ponto principal de encontro para passeios",
-    link: "https://maps.google.com/?q=Central+de+Turismo+Canoa+Quebrada",
+    link: "https://maps.app.goo.gl/EqrjEd1TQJjeLx2QA",
+  },
+  {
+    name: "Praça Central - Maria Alice",
+    description: "Referência no centro de Canoa Quebrada",
+    link: "https://maps.app.goo.gl/BMMqsWuVrL1dUqKo6",
   },
   {
     name: "Praça Dragão do Mar",
-    description: "Referência no centro de Canoa Quebrada",
-    link: "https://maps.google.com/?q=Praca+Dragao+do+Mar+Canoa+Quebrada",
-  },
-  {
-    name: "Praça Broadway",
     description: "Coração da vida noturna local",
-    link: "https://maps.google.com/?q=Broadway+Canoa+Quebrada",
+    link: "https://maps.app.goo.gl/Rgg6S27gsuWqhcPj8",
   },
 ];
 

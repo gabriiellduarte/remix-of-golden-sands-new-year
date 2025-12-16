@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import { Sparkles, Music, Waves, Star } from "lucide-react";
+import { Sparkles, Music, Waves, Star, Sun } from "lucide-react";
 
 const features = [
   {
     icon: Sparkles,
     title: "Experiência Premium",
-    description: "Um evento cuidadosamente planejado para proporcionar momentos inesquecíveis.",
+    description: "Cada detalhe foi pensado para transformar sua virada de ano em um momento memorável, com conforto, exclusividade e uma atmosfera à altura de uma das praias mais icônicas do Brasil.",
   },
   {
     icon: Music,
     title: "Atrações Exclusivas",
-    description: "DJs internacionais e shows ao vivo com o melhor da música eletrônica e brasileira.",
+    description: "Uma curadoria musical especial com DJs renomados e apresentações ao vivo que misturam música eletrônica e brasilidade, criando a trilha sonora perfeita para celebrar novos começos.",
   },
   {
     icon: Waves,
     title: "Cenário Paradisíaco",
-    description: "Celebre em uma das praias mais belas do Brasil, com vista privilegiada para o mar.",
+    description: "Pé na areia, brisa do mar e o pôr do sol mais bonito do Ceará. Viva a virada do ano em Canoa Quebrada, cercado por paisagens deslumbrantes e uma energia contagiante.",
   },
   {
-    icon: Star,
-    title: "Gastronomia de Alto Padrão",
-    description: "Open bar premium e cardápio assinado por chefs renomados.",
+    icon: Sun,
+    title: "Passeios e Aventura",
+    description: "Explore Canoa Quebrada além da festa. Passeios de buggy pelas dunas, falésias impressionantes, lagoas escondidas e experiências que conectam você à natureza, tornando seu Réveillon ainda mais completo e inesquecível.",
   },
 ];
 
@@ -36,11 +36,9 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <span className="text-primary font-sans text-sm tracking-[0.3em] uppercase mb-4 block">
-            Sobre o Evento
-          </span>
+          
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
-            Uma Noite <span className="text-gold-gradient">Extraordinária</span>
+            Uma Expreiência <span className="text-gold-gradient">Inesquecível</span>
           </h2>
           <div className="gold-divider mb-8" />
           <p className="font-sans text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
