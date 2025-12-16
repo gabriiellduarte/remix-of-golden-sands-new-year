@@ -5,9 +5,10 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Início", href: "#" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Atrações", href: "#atracoes" },
+  { label: "Como Chegar", href: "#como-chegar" },
+  { label: "O Que Fazer", href: "#oque-fazer" },
   { label: "Local", href: "#localizacao" },
-  { label: "Ingressos", href: "#ingressos" },
+  { label: "Dicas", href: "#dicas" },
 ];
 
 const Navbar = () => {
@@ -58,10 +59,10 @@ const Navbar = () => {
 
           {/* CTA */}
           <a
-            href="#ingressos"
+            href="#dicas"
             className="hidden md:inline-block px-6 py-2.5 rounded-full text-sm font-sans font-medium bg-primary text-primary-foreground hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
           >
-            Ingressos
+            Dicas Úteis
           </a>
 
           {/* Mobile menu button */}
@@ -110,11 +111,11 @@ const Navbar = () => {
               className="mt-10"
             >
               <a
-                href="#ingressos"
+                href="#dicas"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="btn-premium inline-block"
               >
-                Garantir Ingresso
+                Ver Dicas
               </a>
             </motion.div>
           </motion.div>

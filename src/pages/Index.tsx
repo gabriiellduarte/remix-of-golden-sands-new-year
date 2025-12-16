@@ -1,9 +1,11 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import AttractionsSection from "@/components/AttractionsSection";
+import HowToGetSection from "@/components/HowToGetSection";
+import ActivitiesSection from "@/components/ActivitiesSection";
 import LocationSection from "@/components/LocationSection";
-import TicketsSection from "@/components/TicketsSection";
+import ImportantPlacesSection from "@/components/ImportantPlacesSection";
+import TipsSection from "@/components/TipsSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -13,9 +15,11 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
-        <AttractionsSection />
+        <HowToGetSection />
+        <ActivitiesSection />
         <LocationSection />
-        <TicketsSection />
+        <ImportantPlacesSection />
+        <TipsSection />
       </main>
       <Footer />
     </div>
