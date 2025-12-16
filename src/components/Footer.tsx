@@ -33,37 +33,7 @@ const Footer = () => {
             </p>
           </motion.div>
 
-          {/* Contact */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-          >
-            <h4 className="font-serif text-lg font-medium mb-4 text-foreground">
-              Contato
-            </h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="mailto:contato@reveilloncanoaquebrada.com.br"
-                  className="flex items-center gap-3 font-sans text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
-                >
-                  <Mail className="w-4 h-4" />
-                  contato@reveilloncanoaquebrada.com.br
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+5585999999999"
-                  className="flex items-center gap-3 font-sans text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
-                >
-                  <Phone className="w-4 h-4" />
-                  +55 (85) 99999-9999
-                </a>
-              </li>
-            </ul>
-          </motion.div>
+          
 
           {/* Social */}
           <motion.div

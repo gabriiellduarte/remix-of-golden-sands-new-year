@@ -12,7 +12,7 @@ const HeroSection = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="/hero-video2.mp4" type="video/mp4" />
         </video>
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
@@ -75,9 +75,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <a href="#ingressos" className="btn-premium">
-            Garanta seu Ingresso
-          </a>
+          
           <a href="#sobre" className="btn-premium-outline">
             Saiba Mais
           </a>

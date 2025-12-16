@@ -44,8 +44,7 @@ const AboutSection = () => {
           </h2>
           <div className="gold-divider mb-8" />
           <p className="font-sans text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-            O Réveillon Canoa Quebrada 2026 é mais do que uma festa — é uma celebração da vida, 
-            do luxo e da natureza em perfeita harmonia. Prepare-se para viver a virada do ano 
+            O Réveillon Canoa Quebrada 2026 é mais do que uma festa — é uma celebração da vida e da natureza em perfeita harmonia. Prepare-se para viver a virada do ano 
             mais memorável da sua vida.
           </p>
         </motion.div>
