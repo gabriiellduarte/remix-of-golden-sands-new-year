@@ -37,9 +37,9 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-4 leading-tight"
         >
-          <span className="text-gold-gradient">Réveillon</span>
+          <span className="text-gold-gradient">Final de Ano</span>
           <br />
-          <span className="text-foreground">Canoa Quebrada</span>
+          <span className="text-foreground">em Canoa Quebrada</span>
         </motion.h1>
 
         <motion.p
@@ -64,9 +64,9 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           className="font-sans text-base md:text-lg text-foreground/80 max-w-xl mx-auto mb-12"
         >
-          Uma experiência exclusiva à beira-mar.
+          Descubra as belezas de Canoa Quebrada e encerre o ano
           <br />
-          Celebre a virada do ano em grande estilo.
+          em um dos destinos mais incríveis do Ceará. O Réveillon é só o bônus!
         </motion.p>
 
         <motion.div

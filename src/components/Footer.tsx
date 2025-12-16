@@ -23,13 +23,13 @@ const Footer = () => {
             transition={{ duration: 0.8 }}
           >
             <h3 className="font-serif text-2xl font-medium mb-4">
-              <span className="text-gold-gradient">Réveillon</span>
+              <span className="text-gold-gradient">Final de Ano</span>
               <br />
-              <span className="text-foreground">Canoa Quebrada</span>
+              <span className="text-foreground">em Canoa Quebrada</span>
             </h3>
             <p className="font-sans text-muted-foreground text-sm leading-relaxed">
-              O evento de Ano Novo mais exclusivo do litoral cearense. 
-              Uma experiência premium à beira-mar.
+              Descubra Canoa Quebrada e encerre o ano em um dos destinos 
+              mais incríveis do Ceará. O Réveillon é o bônus!
             </p>
           </motion.div>
 
@@ -64,7 +64,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-sans text-xs text-muted-foreground">
-              © 2025 Réveillon Canoa Quebrada. Todos os direitos reservados.
+              © 2025 Final de Ano em Canoa Quebrada. Todos os direitos reservados.
             </p>
             <div className="flex gap-6">
               <a
