@@ -1,46 +1,57 @@
 import { motion } from "framer-motion";
 import { Car, Bike, Wind, Building2 } from "lucide-react";
-
-const activities = [
-  {
-    icon: Car,
-    name: "Passeio de Buggy",
-    description: "Roteiros pelas falésias, dunas e lagoas com paradas para banho e fotos incríveis.",
-    highlights: [
-      "Duna do Pôr do Sol",
-      "Lagoa do Mato",
-      "Garganta do Diabo",
-    ],
-    note: "Opções com emoção (radicais) ou sem emoção (mais tranquilas)",
-    meetingPoint: "Central de Turismo",
-  },
-  {
-    icon: Bike,
-    name: "Passeio de Quadriciclo",
-    description: "Aventure-se pelas dunas e trilhas de Canoa Quebrada em um quadriciclo.",
-    highlights: [],
-    note: "Perfeito para quem busca adrenalina",
-    meetingPoint: "Central de Turismo",
-  },
-  {
-    icon: Wind,
-    name: "Passeio de Parapente",
-    description: "Voe sobre as falésias e tenha uma vista privilegiada de toda a região.",
-    highlights: [],
-    note: "Experiência inesquecível para os aventureiros",
-    meetingPoint: "Consultar local de encontro",
-  },
-  {
-    icon: Building2,
-    name: "Centro Histórico de Aracati",
-    description: "Conheça a arquitetura colonial e a história da cidade mais antiga do litoral leste.",
-    highlights: [],
-    note: "Passeio cultural imperdível",
-    meetingPoint: "Central de Turismo",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ActivitiesSection = () => {
+  const { t, language } = useLanguage();
+
+  const activities = [
+    {
+      icon: Car,
+      name: t("activities.buggy.title"),
+      description: t("activities.buggy.desc"),
+      highlights: [
+        "Duna do Pôr do Sol",
+        "Lagoa do Mato",
+        "Garganta do Diabo",
+      ],
+      note: language === "pt" 
+        ? "Opções com emoção (radicais) ou sem emoção (mais tranquilas)" 
+        : "Options with thrill (radical) or without (calmer)",
+      meetingPoint: t("howToGet.point1.name"),
+    },
+    {
+      icon: Bike,
+      name: t("activities.quadricycle.title"),
+      description: t("activities.quadricycle.desc"),
+      highlights: [],
+      note: language === "pt" 
+        ? "Perfeito para quem busca adrenalina" 
+        : "Perfect for those seeking adrenaline",
+      meetingPoint: t("howToGet.point1.name"),
+    },
+    {
+      icon: Wind,
+      name: t("activities.paragliding.title"),
+      description: t("activities.paragliding.desc"),
+      highlights: [],
+      note: language === "pt" 
+        ? "Experiência inesquecível para os aventureiros" 
+        : "Unforgettable experience for adventurers",
+      meetingPoint: language === "pt" ? "Consultar local de encontro" : "Check meeting point",
+    },
+    {
+      icon: Building2,
+      name: language === "pt" ? "Centro Histórico de Aracati" : "Aracati Historic Center",
+      description: language === "pt" 
+        ? "Conheça a arquitetura colonial e a história da cidade mais antiga do litoral leste."
+        : "Discover the colonial architecture and history of the oldest city on the east coast.",
+      highlights: [],
+      note: language === "pt" ? "Passeio cultural imperdível" : "Unmissable cultural tour",
+      meetingPoint: t("howToGet.point1.name"),
+    },
+  ];
+
   return (
     <section id="oque-fazer" className="section-padding relative">
       <div className="max-w-6xl mx-auto">
@@ -53,15 +64,14 @@ const ActivitiesSection = () => {
           className="text-center mb-20"
         >
           <span className="text-primary font-sans text-sm tracking-[0.3em] uppercase mb-4 block">
-            O Que Fazer
+            {t("activities.label")}
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
-            Onde Se <span className="text-gold-gradient">Aventurar</span>
+            {t("activities.title1")} <span className="text-gold-gradient">{t("activities.title2")}</span>
           </h2>
           <div className="gold-divider mb-8" />
           <p className="font-sans text-muted-foreground text-lg max-w-3xl mx-auto">
-            Para os amantes de emoção e natureza, Aracati e Canoa Quebrada são um prato cheio.
-            Roteiros seguem trilhas pelas falésias, dunas e lagoas com paradas para banho e fotos incríveis.
+            {t("activities.description")}
           </p>
         </motion.div>
 
@@ -93,7 +103,7 @@ const ActivitiesSection = () => {
                 {activity.highlights.length > 0 && (
                   <div className="ml-[4.5rem] mb-4">
                     <p className="font-sans text-xs text-primary mb-2 uppercase tracking-wider">
-                      Paradas Incluídas:
+                      {language === "pt" ? "Paradas Incluídas:" : "Included Stops:"}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {activity.highlights.map((highlight) => (

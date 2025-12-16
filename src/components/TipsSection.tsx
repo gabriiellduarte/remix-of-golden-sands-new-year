@@ -6,41 +6,41 @@ import {
   Waves,
   AlertTriangle
 } from "lucide-react";
-
-const tipCategories = [
-  {
-    icon: ShieldCheck,
-    title: "Segurança",
-    tips: [
-      "Mantenha seus pertences sempre por perto",
-      "Use protetor solar e mantenha-se hidratado",
-      "Evite nadar sozinho, especialmente à noite",
-      "Respeite os limites das áreas sinalizadas",
-    ],
-  },
-  {
-    icon: Backpack,
-    title: "O que Levar",
-    tips: [
-      "Protetor solar e repelente",
-      "Roupas leves e confortáveis",
-      "Chapéu ou boné e óculos de sol",
-      "Dinheiro em espécie (nem todos aceitam cartão)",
-    ],
-  },
-  {
-    icon: PartyPopper,
-    title: "Sobre o Evento",
-    tips: [
-      "A festa principal começa às 22h na praia",
-      "Queima de fogos à meia-noite",
-      "Shows musicais durante toda a noite",
-      "Chegue cedo para garantir um bom lugar",
-    ],
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const TipsSection = () => {
+  const { t, language } = useLanguage();
+
+  const tipCategories = [
+    {
+      icon: ShieldCheck,
+      title: t("tips.safety.title"),
+      tips: [
+        t("tips.safety.tip1"),
+        t("tips.safety.tip2"),
+        t("tips.safety.tip3"),
+        t("tips.safety.tip4"),
+      ],
+    },
+    {
+      icon: Backpack,
+      title: t("tips.packing.title"),
+      tips: [
+        t("tips.packing.tip1"),
+        t("tips.packing.tip2"),
+        t("tips.packing.tip3"),
+        t("tips.packing.tip4"),
+      ],
+    },
+    {
+      icon: PartyPopper,
+      title: t("tips.bonus.title"),
+      tips: [
+        t("tips.bonus.desc"),
+      ],
+    },
+  ];
+
   return (
     <section id="dicas" className="section-padding relative">
       <div className="max-w-6xl mx-auto">
@@ -53,14 +53,14 @@ const TipsSection = () => {
           className="text-center mb-20"
         >
           <span className="text-primary font-sans text-sm tracking-[0.3em] uppercase mb-4 block">
-            Prepare-se
+            {t("tips.label")}
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
-            Dicas <span className="text-gold-gradient">Úteis</span>
+            {t("tips.title1")} <span className="text-gold-gradient">{t("tips.title2")}</span>
           </h2>
           <div className="gold-divider mb-8" />
           <p className="font-sans text-muted-foreground text-lg max-w-2xl mx-auto">
-            Informações importantes para aproveitar sua viagem com segurança e conforto.
+            {t("tips.description")}
           </p>
         </motion.div>
 
@@ -112,12 +112,15 @@ const TipsSection = () => {
               <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
                 <AlertTriangle className="w-5 h-5 text-primary" />
                 <h3 className="font-serif text-xl font-medium text-foreground">
-                  Lembre-se: o mar merece respeito!
+                  {language === "pt" 
+                    ? "Lembre-se: o mar merece respeito!" 
+                    : "Remember: the sea deserves respect!"}
                 </h3>
               </div>
               <p className="font-sans text-muted-foreground">
-                Sempre observe as condições do mar antes de entrar. Se houver bandeira vermelha, 
-                não entre na água. Divirta-se com segurança e aproveite Canoa Quebrada!
+                {language === "pt"
+                  ? "Sempre observe as condições do mar antes de entrar. Se houver bandeira vermelha, não entre na água. Divirta-se com segurança e aproveite Canoa Quebrada!"
+                  : "Always check sea conditions before entering. If there is a red flag, do not enter the water. Have fun safely and enjoy Canoa Quebrada!"}
               </p>
             </div>
           </div>

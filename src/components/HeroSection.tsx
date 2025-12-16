@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
@@ -37,9 +40,9 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium mb-4 leading-tight"
         >
-          <span className="text-gold-gradient">Final de Ano</span>
+          <span className="text-gold-gradient">{t("hero.title1")}</span>
           <br />
-          <span className="text-foreground">em Canoa Quebrada</span>
+          <span className="text-foreground">{t("hero.title2")}</span>
         </motion.h1>
 
         <motion.p
@@ -64,9 +67,7 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
           className="font-sans text-base md:text-lg text-foreground/80 max-w-xl mx-auto mb-12"
         >
-          Descubra as belezas de Canoa Quebrada e encerre o ano
-          <br />
-          em um dos destinos mais incríveis do Ceará.
+          {t("hero.subtitle")}
         </motion.p>
 
         <motion.div
@@ -77,7 +78,7 @@ const HeroSection = () => {
         >
           
           <a href="#sobre" className="btn-premium-outline">
-            Saiba Mais
+            {t("hero.cta")}
           </a>
         </motion.div>
       </div>
