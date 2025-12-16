@@ -60,7 +60,7 @@ const TipsSection = () => {
           </h2>
           <div className="gold-divider mb-8" />
           <p className="font-sans text-muted-foreground text-lg max-w-2xl mx-auto">
-            Informações importantes para aproveitar o Réveillon com segurança e conforto.
+            Informações importantes para aproveitar sua viagem com segurança e conforto.
           </p>
         </motion.div>
 
@@ -117,7 +117,7 @@ const TipsSection = () => {
               </div>
               <p className="font-sans text-muted-foreground">
                 Sempre observe as condições do mar antes de entrar. Se houver bandeira vermelha, 
-                não entre na água. Divirta-se com segurança e aproveite o Réveillon!
+                não entre na água. Divirta-se com segurança e aproveite Canoa Quebrada!
               </p>
             </div>
           </div>
