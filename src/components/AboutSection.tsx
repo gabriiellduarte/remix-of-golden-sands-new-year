@@ -1,30 +1,33 @@
 import { motion } from "framer-motion";
-import { Sparkles, Music, Waves, Star, Sun } from "lucide-react";
-
-const features = [
-  {
-    icon: Sparkles,
-    title: "Experiência Premium",
-    description: "Cada detalhe foi pensado para transformar sua virada de ano em um momento memorável, com conforto, exclusividade e uma atmosfera à altura de uma das praias mais icônicas do Brasil.",
-  },
-  {
-    icon: Music,
-    title: "Atrações Exclusivas",
-    description: "Uma curadoria musical especial com DJs renomados e apresentações ao vivo que misturam música eletrônica e brasilidade, criando a trilha sonora perfeita para celebrar novos começos.",
-  },
-  {
-    icon: Waves,
-    title: "Cenário Paradisíaco",
-    description: "Pé na areia, brisa do mar e o pôr do sol mais bonito do Ceará. Viva a virada do ano em Canoa Quebrada, cercado por paisagens deslumbrantes e uma energia contagiante.",
-  },
-  {
-    icon: Sun,
-    title: "Passeios e Aventura",
-    description: "Explore Canoa Quebrada além da festa. Passeios de buggy pelas dunas, falésias impressionantes, lagoas escondidas e experiências que conectam você à natureza, tornando seu Réveillon ainda mais completo e inesquecível.",
-  },
-];
+import { Sparkles, Music, Waves, Sun } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const AboutSection = () => {
+  const { t } = useLanguage();
+
+  const features = [
+    {
+      icon: Sparkles,
+      title: t("about.feature1.title"),
+      description: t("about.feature1.desc"),
+    },
+    {
+      icon: Music,
+      title: t("about.feature2.title"),
+      description: t("about.feature2.desc"),
+    },
+    {
+      icon: Waves,
+      title: t("about.feature3.title"),
+      description: t("about.feature3.desc"),
+    },
+    {
+      icon: Sun,
+      title: t("about.feature4.title"),
+      description: t("about.feature4.desc"),
+    },
+  ];
+
   return (
     <section id="sobre" className="section-padding relative">
       <div className="max-w-6xl mx-auto">
@@ -38,12 +41,11 @@ const AboutSection = () => {
         >
           
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
-            Uma Expreiência <span className="text-gold-gradient">Inesquecível</span>
+            {t("about.title1")} <span className="text-gold-gradient">{t("about.title2")}</span>
           </h2>
           <div className="gold-divider mb-8" />
           <p className="font-sans text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-            Canoa Quebrada é mais do que um destino — é uma experiência única de natureza, aventura e cultura. 
-            Venha descobrir esse paraíso e, de bônus, celebre a virada do ano em grande estilo!
+            {t("about.description")}
           </p>
         </motion.div>
 

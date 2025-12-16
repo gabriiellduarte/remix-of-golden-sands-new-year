@@ -10,65 +10,68 @@ import {
   Users,
   Flame
 } from "lucide-react";
-
-const places = [
-  {
-    icon: Cross,
-    name: "Farmácia",
-    description: "Medicamentos e produtos de saúde",
-    link: "https://maps.google.com/?q=Farmacia+Canoa+Quebrada",
-  },
-  {
-    icon: Shield,
-    name: "Posto Policial",
-    description: "Delegacia de polícia local",
-    link: "https://maps.google.com/?q=Delegacia+Canoa+Quebrada",
-  },
-  {
-    icon: Stethoscope,
-    name: "Posto de Saúde",
-    description: "Atendimento básico de saúde",
-    link: "https://maps.google.com/?q=Posto+de+Saude+Canoa+Quebrada",
-  },
-  {
-    icon: Hospital,
-    name: "UPA",
-    description: "Unidade de Pronto Atendimento",
-    link: "https://maps.google.com/?q=UPA+Aracati",
-  },
-  {
-    icon: Hospital,
-    name: "Hospital Municipal",
-    description: "Atendimento de emergência",
-    link: "https://maps.google.com/?q=Hospital+Municipal+Aracati",
-  },
-  {
-    icon: Bus,
-    name: "Parada de Ônibus/Topics",
-    description: "Transporte para Aracati e Majorlândia",
-    link: "https://maps.google.com/?q=Parada+Onibus+Canoa+Quebrada",
-  },
-];
-
-const emergencyContacts = [
-  {
-    icon: Siren,
-    name: "Polícia",
-    number: "190",
-  },
-  {
-    icon: Users,
-    name: "Guarda Municipal",
-    number: "153",
-  },
-  {
-    icon: Flame,
-    name: "Bombeiros",
-    number: "193",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ImportantPlacesSection = () => {
+  const { t, language } = useLanguage();
+
+  const places = [
+    {
+      icon: Cross,
+      name: t("places.pharmacy"),
+      description: language === "pt" ? "Medicamentos e produtos de saúde" : "Medicines and health products",
+      link: "https://maps.google.com/?q=Farmacia+Canoa+Quebrada",
+    },
+    {
+      icon: Shield,
+      name: language === "pt" ? "Posto Policial" : "Police Station",
+      description: language === "pt" ? "Delegacia de polícia local" : "Local police station",
+      link: "https://maps.google.com/?q=Delegacia+Canoa+Quebrada",
+    },
+    {
+      icon: Stethoscope,
+      name: t("places.health"),
+      description: language === "pt" ? "Atendimento básico de saúde" : "Basic health care",
+      link: "https://maps.google.com/?q=Posto+de+Saude+Canoa+Quebrada",
+    },
+    {
+      icon: Hospital,
+      name: "UPA",
+      description: language === "pt" ? "Unidade de Pronto Atendimento" : "Emergency Care Unit",
+      link: "https://maps.google.com/?q=UPA+Aracati",
+    },
+    {
+      icon: Hospital,
+      name: language === "pt" ? "Hospital Municipal" : "Municipal Hospital",
+      description: language === "pt" ? "Atendimento de emergência" : "Emergency care",
+      link: "https://maps.google.com/?q=Hospital+Municipal+Aracati",
+    },
+    {
+      icon: Bus,
+      name: language === "pt" ? "Parada de Ônibus/Topics" : "Bus/Van Stop",
+      description: language === "pt" ? "Transporte para Aracati e Majorlândia" : "Transport to Aracati and Majorlândia",
+      link: "https://maps.google.com/?q=Parada+Onibus+Canoa+Quebrada",
+    },
+  ];
+
+  const emergencyContacts = [
+    {
+      icon: Siren,
+      name: language === "pt" ? "Polícia" : "Police",
+      number: "190",
+    },
+    {
+      icon: Users,
+      name: language === "pt" ? "Guarda Municipal" : "Municipal Guard",
+      number: "153",
+    },
+    {
+      icon: Flame,
+      name: language === "pt" ? "Bombeiros" : "Fire Department",
+      number: "193",
+    },
+  ];
+
   return (
     <section id="locais-importantes" className="section-padding relative bg-card/50">
       <div className="max-w-6xl mx-auto">
@@ -81,10 +84,10 @@ const ImportantPlacesSection = () => {
           className="text-center mb-20"
         >
           <span className="text-primary font-sans text-sm tracking-[0.3em] uppercase mb-4 block">
-            Informações Úteis
+            {t("places.label")}
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
-            Locais <span className="text-gold-gradient">Importantes</span>
+            {t("places.title1")} <span className="text-gold-gradient">{t("places.title2")}</span>
           </h2>
           <div className="gold-divider" />
         </motion.div>
@@ -117,7 +120,7 @@ const ImportantPlacesSection = () => {
                 </div>
               </div>
               <span className="mt-3 inline-flex items-center text-primary text-xs font-sans">
-                Ver no mapa →
+                {t("places.viewLocation")} →
               </span>
             </motion.a>
           ))}
@@ -132,7 +135,7 @@ const ImportantPlacesSection = () => {
         >
           <h3 className="font-serif text-2xl font-medium mb-8 text-center">
             <Phone className="w-6 h-6 inline-block mr-3 text-primary" />
-            Telefones Importantes
+            {language === "pt" ? "Telefones Importantes" : "Important Phone Numbers"}
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {emergencyContacts.map((contact, index) => (

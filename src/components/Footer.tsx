@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Instagram, Facebook, Youtube } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import logoPrefeitura from "@/assets/logo-prefeitura-aracati.png";
 
 const socialLinks = [
@@ -9,6 +10,8 @@ const socialLinks = [
 ];
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="relative pt-24 pb-8 px-6">
       {/* Gradient divider */}
@@ -29,9 +32,7 @@ const Footer = () => {
               className="h-14 w-auto mb-4"
             />
             <p className="font-sans text-muted-foreground text-sm leading-relaxed max-w-xs">
-              Realização: Prefeitura Municipal de Aracati.
-              Descubra Canoa Quebrada e encerre o ano em um dos destinos 
-              mais incríveis do Ceará.
+              {t("footer.realization")} {t("footer.description")}
             </p>
           </motion.div>
 
@@ -45,7 +46,7 @@ const Footer = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <h4 className="font-serif text-lg font-medium mb-4 text-foreground">
-              Redes Sociais
+              {t("footer.social")}
             </h4>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
@@ -66,20 +67,20 @@ const Footer = () => {
         <div className="pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-sans text-xs text-muted-foreground">
-              © 2025 Final de Ano em Canoa Quebrada. Todos os direitos reservados.
+              {t("footer.rights")}
             </p>
             <div className="flex gap-6">
               <a
                 href="#"
                 className="font-sans text-xs text-muted-foreground hover:text-primary transition-colors duration-300"
               >
-                Termos de Uso
+                {t("footer.terms")}
               </a>
               <a
                 href="#"
                 className="font-sans text-xs text-muted-foreground hover:text-primary transition-colors duration-300"
               >
-                Política de Privacidade
+                {t("footer.privacy")}
               </a>
             </div>
           </div>

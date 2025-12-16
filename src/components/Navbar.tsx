@@ -1,20 +1,21 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import logoPrefeitura from "@/assets/logo-prefeitura-aracati.png";
-
-const navItems = [
-  { label: "Início", href: "#" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Como Chegar", href: "#como-chegar" },
-  { label: "O Que Fazer", href: "#oque-fazer" },
-  { label: "Local", href: "#localizacao" },
-  { label: "Dicas", href: "#dicas" },
-];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+
+  const navItems = [
+    { label: t("nav.home"), href: "#" },
+    { label: t("nav.about"), href: "#sobre" },
+    { label: t("nav.howToGet"), href: "#como-chegar" },
+    { label: t("nav.whatToDo"), href: "#oque-fazer" },
+    { label: t("nav.tips"), href: "#dicas" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +25,10 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleLanguage = () => {
+    setLanguage(language === "pt" ? "en" : "pt");
+  };
 
   return (
     <>
@@ -61,22 +66,41 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* CTA */}
-          <a
-            href="#dicas"
-            className="hidden md:inline-block px-6 py-2.5 rounded-full text-sm font-sans font-medium bg-primary text-primary-foreground hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
-          >
-            Dicas Úteis
-          </a>
+          {/* Language toggle + CTA */}
+          <div className="hidden md:flex items-center gap-4">
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-2 rounded-full text-sm font-sans text-foreground/70 hover:text-primary hover:bg-primary/10 transition-all duration-300"
+              aria-label="Toggle language"
+            >
+              <Globe className="w-4 h-4" />
+              <span className="uppercase font-medium">{language}</span>
+            </button>
+            <a
+              href="#dicas"
+              className="px-6 py-2.5 rounded-full text-sm font-sans font-medium bg-primary text-primary-foreground hover:shadow-lg hover:shadow-primary/30 transition-all duration-300"
+            >
+              {t("nav.usefulTips")}
+            </a>
+          </div>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden w-10 h-10 flex items-center justify-center text-foreground"
-            aria-label="Menu"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={toggleLanguage}
+              className="w-10 h-10 flex items-center justify-center text-foreground/70 hover:text-primary transition-colors"
+              aria-label="Toggle language"
+            >
+              <Globe className="w-5 h-5" />
+            </button>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="w-10 h-10 flex items-center justify-center text-foreground"
+              aria-label="Menu"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </motion.nav>
 
@@ -119,7 +143,7 @@ const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="btn-premium inline-block"
               >
-                Ver Dicas
+                {t("nav.seeTips")}
               </a>
             </motion.div>
           </motion.div>
