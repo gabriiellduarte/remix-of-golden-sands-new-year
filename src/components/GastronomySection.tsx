@@ -52,8 +52,8 @@ const GastronomySection = () => {
   ];
 
   const seafoodVendors = {
-    specialized: ["Ygor Pescados", "Renato Pescados", "Tonê Pescados", "Camarões BR e Camarões da Praia", "Maris Pescados"],
-    supermarkets: ["Super Damasceno", "Pinheiro Supermercado", "Mix Matheus"],
+    specialized: ["Ygor Pescados", "Renato Pescados", "Camarões BR e Camarões da Praia"],
+    supermarkets: ["Super Minibox","Super Damasceno", "Pinheiro Supermercado", "Mix Matheus"],
     market: language === "pt" ? "Mercado Público (Mercado do Peixe) de Aracati" : "Public Market (Fish Market) of Aracati",
   };
 
