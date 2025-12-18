@@ -32,7 +32,7 @@ const ImportantPlacesSection = () => {
       icon: Stethoscope,
       name: t("places.health"),
       description: language === "pt" ? "Atendimento básico de saúde" : "Basic health care",
-      link: "https://maps.google.com/?q=Posto+de+Saude+Canoa+Quebrada",
+      link: "https://maps.app.goo.gl/W4o4SDgDtZ9DBiDa7",
     },
     {
       icon: Hospital,
@@ -44,13 +44,13 @@ const ImportantPlacesSection = () => {
       icon: Hospital,
       name: language === "pt" ? "Hospital Municipal" : "Municipal Hospital",
       description: language === "pt" ? "Atendimento de emergência" : "Emergency care",
-      link: "https://maps.google.com/?q=Hospital+Municipal+Aracati",
+      link: "https://maps.app.goo.gl/xC72MUVR6m47yuTS7",
     },
     {
       icon: Bus,
       name: language === "pt" ? "Parada de Ônibus/Topics" : "Bus/Van Stop",
       description: language === "pt" ? "Transporte para Aracati e Majorlândia" : "Transport to Aracati and Majorlândia",
-      link: "https://maps.google.com/?q=Parada+Onibus+Canoa+Quebrada",
+      link: "https://maps.app.goo.gl/RTSsaiMASeHQUtTF9",
     },
   ];
 
