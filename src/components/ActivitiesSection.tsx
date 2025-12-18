@@ -11,9 +11,7 @@ const ActivitiesSection = () => {
       name: t("activities.buggy.title"),
       description: t("activities.buggy.desc"),
       highlights: [
-        "Duna do Pôr do Sol",
-        "Lagoa do Mato",
-        "Garganta do Diabo",
+        
       ],
       note: language === "pt" 
         ? "Opções com emoção (radicais) ou sem emoção (mais tranquilas)" 

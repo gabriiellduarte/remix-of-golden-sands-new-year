@@ -22,7 +22,7 @@ const HowToGetSection = () => {
     {
       name: t("howToGet.point1.name"),
       description: t("howToGet.point1.desc"),
-      link: "https://maps.app.goo.gl/EqrjEd1TQJjeLx2QA",
+      link: "https://maps.app.goo.gl/7soBQJAeheUwiY699",
     },
     {
       name: t("howToGet.point2.name"),
