@@ -16,6 +16,7 @@ const Navbar = () => {
     { label: t("nav.about"), href: "#sobre" },
     { label: t("nav.howToGet"), href: "#como-chegar" },
     { label: t("nav.whatToDo"), href: "#oque-fazer" },
+    { label: t("nav.gastronomy"), href: "#gastronomia" },
     { label: t("nav.tips"), href: "#dicas" },
   ];
 
