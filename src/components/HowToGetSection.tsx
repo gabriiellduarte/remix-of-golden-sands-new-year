@@ -22,7 +22,7 @@ const HowToGetSection = () => {
       description: t("howToGet.route1.desc"),
       kmlPath: "/routes/aracati-canoa-beirada.kml",
       link: "https://maps.google.com/?q=Estacionamento+Canoa+Quebrada",
-      color: "#FFD700",
+      color: "#ff0026",
     },
     {
       name: t("howToGet.route2.name"),
