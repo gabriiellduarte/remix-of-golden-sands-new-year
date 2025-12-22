@@ -19,7 +19,6 @@ const GastronomySection = () => {
     { name: "Sal e Mar", location: "Canoa Quebrada", highlight: language === "pt" ? "Culinária brasileira e frutos do mar, com bom ambiente" : "Brazilian cuisine and seafood, with good atmosphere", instagram: "barracasalemarcanoa" },
     { name: "TIKI BEACH", location: "Canoa Quebrada", highlight: language === "pt" ? "Barraca de praia com ótima estrutura para almoço à beira-mar" : "Beach bar with great structure for seaside lunch", instagram: "tikibeachcanoaquebrada" },
     { name: "El Argentino", location: "Canoa Quebrada", highlight: language === "pt" ? "Carnes (Parrilla) e cozinha argentina" : "Meats (Parrilla) and Argentine cuisine", instagram: "elargentinogrillcanoa" },
-    { name: "Paraíso Arre Égua", location: "Canoa Quebrada", highlight: language === "pt" ? "Culinária nordestina e brasileira, ambiente rústico" : "Northeastern and Brazilian cuisine, rustic atmosphere", instagram: "paraisoarrejegua" },
   ];
 
   const beachBars = [
