@@ -1,15 +1,28 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Navigation, Car } from "lucide-react";
+import { MapPin, Navigation, Car, MapIcon } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import RouteMap from "./RouteMap";
+
+interface RouteData {
+  name: string;
+  description: string;
+  kmlPath?: string;
+  link: string;
+  color?: string;
+}
 
 const HowToGetSection = () => {
   const { t } = useLanguage();
+  const [selectedRoute, setSelectedRoute] = useState<RouteData | null>(null);
 
-  const routes = [
+  const routes: RouteData[] = [
     {
       name: t("howToGet.route1.name"),
       description: t("howToGet.route1.desc"),
+      kmlPath: "/routes/aracati-canoa-beirada.kml",
       link: "https://maps.google.com/?q=Estacionamento+Canoa+Quebrada",
+      color: "#FFD700",
     },
     {
       name: t("howToGet.route2.name"),
@@ -70,18 +83,15 @@ const HowToGetSection = () => {
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {routes.map((route, index) => (
-              <motion.a
+              <motion.div
                 key={route.name}
-                href={route.link}
-                target="_blank"
-                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="glass-card p-6 group hover:border-primary/50 hover:gold-glow transition-all duration-500"
               >
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Navigation className="w-5 h-5 text-primary" />
                   </div>
@@ -94,10 +104,26 @@ const HowToGetSection = () => {
                     </p>
                   </div>
                 </div>
-                <span className="mt-4 inline-flex items-center text-primary text-sm font-sans">
-                  {t("howToGet.viewOnMaps")} →
-                </span>
-              </motion.a>
+                <div className="flex gap-3">
+                  {route.kmlPath && (
+                    <button
+                      onClick={() => setSelectedRoute(route)}
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-sm font-sans transition-colors"
+                    >
+                      <MapIcon className="w-4 h-4" />
+                      {t("howToGet.viewRoute")}
+                    </button>
+                  )}
+                  <a
+                    href={route.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2 border border-primary/30 hover:bg-primary/10 text-primary rounded-lg text-sm font-sans transition-colors"
+                  >
+                    {t("howToGet.viewOnMaps")} →
+                  </a>
+                </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
@@ -143,6 +169,16 @@ const HowToGetSection = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Route Map Modal */}
+      {selectedRoute && selectedRoute.kmlPath && (
+        <RouteMap
+          routeName={selectedRoute.name}
+          kmlPath={selectedRoute.kmlPath}
+          color={selectedRoute.color}
+          onClose={() => setSelectedRoute(null)}
+        />
+      )}
     </section>
   );
 };
