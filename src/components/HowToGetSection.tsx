@@ -49,13 +49,13 @@ const HowToGetSection = () => {
     {
       name: t("howToGet.point2.name"),
       description: t("howToGet.point2.desc"),
-      link: "https://maps.app.goo.gl/BMMqsWuVrL1dUqKo6",
-    },
+      link: "https://maps.app.goo.gl/NU3h16xxhqhNVbcq6",
+    },/*
     {
       name: t("howToGet.point3.name"),
       description: t("howToGet.point3.desc"),
       link: "https://maps.app.goo.gl/Rgg6S27gsuWqhcPj8",
-    },
+    },*/
   ];
 
   return (
@@ -148,7 +148,7 @@ const HowToGetSection = () => {
             <MapPin className="w-6 h-6 inline-block mr-3 text-primary" />
             {t("howToGet.meetingPoints")}
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {meetingPoints.map((point, index) => (
               <motion.a
                 key={point.name}

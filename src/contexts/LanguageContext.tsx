@@ -57,7 +57,7 @@ const translations = {
     "howToGet.route3.desc": "Vindo de Majorlândia até o estacionamento",
     "howToGet.point1.name": "Central de Turismo",
     "howToGet.point1.desc": "Ponto principal de encontro para passeios",
-    "howToGet.point2.name": "Praça Central - Maria Alice",
+    "howToGet.point2.name": "Estacionamento Principal",
     "howToGet.point2.desc": "Referência no centro de Canoa Quebrada",
     "howToGet.point3.name": "Praça Dragão do Mar",
     "howToGet.point3.desc": "Coração da vida noturna local",
