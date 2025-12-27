@@ -12,6 +12,9 @@ const GastronomySection = () => {
     { name: "Gusto Italiano", location: "Canoa Quebrada", highlight: language === "pt" ? "Massas frescas e pizzas artesanais" : "Fresh pasta and artisan pizzas", instagram: "gustoitacanoa" },
     { name: "Vitórios", location: "Canoa Quebrada", highlight: language === "pt" ? "Restaurante com variedade no menu" : "Restaurant with varied menu", instagram: "vitorios_canoa" },
     { name: "Pátio Grill", location: "Canoa Quebrada", highlight: language === "pt" ? "Foco em carnes grelhadas e churrasco" : "Focus on grilled meats and BBQ", instagram: "patiogrillcanoaquebrada" },
+    { name: "Don Fuego", location: "Canoa Quebrada", highlight: language === "pt" ? "Gastrobar - Fusion Cuisine" : "Gastrobar - Fusion Cuisine", instagram: "donfuego.ce" },
+    { name: "Salt Japanese", location: "Canoa Quebrada", highlight: language === "pt" ? "Culinária japonesa" : "Japanese cuisine", instagram: "saltjapanese" },
+
   ];
 
   const lunchRestaurants = [
