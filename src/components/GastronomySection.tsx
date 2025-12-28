@@ -14,6 +14,9 @@ const GastronomySection = () => {
     { name: "Pátio Grill", location: "Canoa Quebrada", highlight: language === "pt" ? "Foco em carnes grelhadas e churrasco" : "Focus on grilled meats and BBQ", instagram: "patiogrillcanoaquebrada" },
     { name: "Don Fuego", location: "Canoa Quebrada", highlight: language === "pt" ? "Gastrobar - Fusion Cuisine" : "Gastrobar - Fusion Cuisine", instagram: "donfuego.ce" },
     { name: "Salt Japanese", location: "Canoa Quebrada", highlight: language === "pt" ? "Culinária japonesa" : "Japanese cuisine", instagram: "saltjapanese" },
+    { name: "El Argentino", location: "Canoa Quebrada", highlight: language === "pt" ? "Carnes (Parrilla) e cozinha argentina" : "Meats (Parrilla) and Argentine cuisine", instagram: "largentino_canoaquebrada" },
+    { name: "Regart", location: "Canoa Quebrada", highlight: language === "pt" ? "Bar e Restaurante" : "Bar and Restaurant", instagram: "barregart" },
+
 
   ];
 
@@ -21,7 +24,7 @@ const GastronomySection = () => {
     { name: "O'Nain", location: "Canoa Quebrada/Aracati", highlight: language === "pt" ? "Variedade, incluindo carne de sol e frutos do mar" : "Variety, including sun-dried meat and seafood", instagram: "onainrestaurante" },
     { name: "Sal e Mar", location: "Canoa Quebrada", highlight: language === "pt" ? "Culinária brasileira e frutos do mar, com bom ambiente" : "Brazilian cuisine and seafood, with good atmosphere", instagram: "barracasalemarcanoa" },
     { name: "TIKI BEACH", location: "Canoa Quebrada", highlight: language === "pt" ? "Barraca de praia com ótima estrutura para almoço à beira-mar" : "Beach bar with great structure for seaside lunch", instagram: "tikibeachcanoaquebrada" },
-    { name: "El Argentino", location: "Canoa Quebrada", highlight: language === "pt" ? "Carnes (Parrilla) e cozinha argentina" : "Meats (Parrilla) and Argentine cuisine", instagram: "elargentinogrillcanoa" },
+    { name: "El Argentino", location: "Canoa Quebrada", highlight: language === "pt" ? "Carnes (Parrilla) e cozinha argentina" : "Meats (Parrilla) and Argentine cuisine", instagram: "largentino_canoaquebrada" },
   ];
 
   const beachBars = [
