@@ -33,6 +33,12 @@ const Navbar = () => {
     setLanguage(language === "pt" ? "en" : "pt");
   };
 
+  const caminhoLogoPrefeitura = tema === "dark" ? "/logovazada.png" : logoPrefeitura;
+  const descricaoLogoPrefeitura =
+    tema === "dark"
+      ? "Prefeitura do Aracati - marca vazada para fundo escuro"
+      : "Prefeitura do Aracati";
+
   return (
     <>
       <motion.nav
@@ -48,9 +54,9 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo Prefeitura */}
           <a href="#" className="flex items-center gap-3">
-            <img 
-              src={logoPrefeitura} 
-              alt="Prefeitura do Aracati" 
+            <img
+              src={caminhoLogoPrefeitura}
+              alt={descricaoLogoPrefeitura}
               className="h-10 md:h-12 w-auto"
             />
           </a>
