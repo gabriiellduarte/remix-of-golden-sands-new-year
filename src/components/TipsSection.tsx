@@ -18,7 +18,6 @@ const TipsSection = () => {
       tips: [
         t("tips.safety.tip1"),
         t("tips.safety.tip2"),
-        t("tips.safety.tip3"),
         t("tips.safety.tip4"),
       ],
     },
@@ -32,13 +31,7 @@ const TipsSection = () => {
         t("tips.packing.tip4"),
       ],
     },
-    {
-      icon: PartyPopper,
-      title: t("tips.bonus.title"),
-      tips: [
-        t("tips.bonus.desc"),
-      ],
-    },
+    
   ];
 
   return (
@@ -65,7 +58,7 @@ const TipsSection = () => {
         </motion.div>
 
         {/* Tips Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {tipCategories.map((category, index) => (
             <motion.div
               key={category.title}

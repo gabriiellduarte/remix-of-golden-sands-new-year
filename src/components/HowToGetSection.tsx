@@ -20,23 +20,14 @@ const HowToGetSection = () => {
     {
       name: t("howToGet.route1.name"),
       description: t("howToGet.route1.desc"),
-      kmlPath: "/routes/aracati-canoa-br304.kml",
-      link: "https://maps.app.goo.gl/NU3h16xxhqhNVbcq6",
+      link: "https://maps.app.goo.gl/JVxzjPoFpJwHmijC8",
       color: "#ff0026",
     },
     {
       name: t("howToGet.route2.name"),
       description: t("howToGet.route2.desc"),
-      kmlPath: "/routes/aracati-canoa-ce040.kml",
-      link: "https://maps.app.goo.gl/NU3h16xxhqhNVbcq6",
+      link: "https://maps.app.goo.gl/fW1HA2AjtS7sM12YA",
       color: "#00a8ff",
-    },
-    {
-      name: t("howToGet.route3.name"),
-      description: t("howToGet.route3.desc"),
-      kmlPath: "/routes/majorlandia-canoa.kml",
-      link: "https://maps.app.goo.gl/NU3h16xxhqhNVbcq6",
-      color: "#00ff6a",
     },
   ];
 
@@ -44,13 +35,13 @@ const HowToGetSection = () => {
     {
       name: t("howToGet.point1.name"),
       description: t("howToGet.point1.desc"),
-      link: "https://maps.app.goo.gl/7soBQJAeheUwiY699",
-    },
+      link: "https://maps.app.goo.gl/JVxzjPoFpJwHmijC8",
+    },/*
     {
       name: t("howToGet.point2.name"),
       description: t("howToGet.point2.desc"),
       link: "https://maps.app.goo.gl/NU3h16xxhqhNVbcq6",
-    },/*
+    },
     {
       name: t("howToGet.point3.name"),
       description: t("howToGet.point3.desc"),

@@ -24,15 +24,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-        >
-          <span className="inline-block text-primary font-sans text-sm md:text-base tracking-[0.3em] uppercase mb-6">
-            31 de Dezembro de 2025
-          </span>
-        </motion.div>
+        
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
@@ -45,14 +37,7 @@ const HeroSection = () => {
           <span className="text-foreground">{t("hero.title2")}</span>
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-          className="font-sans text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4"
-        >
-          2026
-        </motion.p>
+        
 
         <motion.div
           initial={{ opacity: 0 }}

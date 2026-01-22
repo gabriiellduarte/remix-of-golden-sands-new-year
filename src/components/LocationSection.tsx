@@ -1,7 +1,53 @@
 import { motion } from "framer-motion";
-import { MapPin, Plane, Car } from "lucide-react";
+import { Landmark, Waves, Car } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const LocationSection = () => {
+  const { language } = useLanguage();
+
+  const descricaoLocal = language === "pt"
+    ? "Aracati combina patrimônio colonial preservado, culinária regional e hospitalidade nordestina com o cenário litorâneo de Canoa Quebrada. Entre uma especial do Cerapió e outra, aproveite o centro histórico tombado e as falésias coloridas que tornaram o destino famoso no mundo inteiro."
+    : "Aracati blends preserved colonial heritage, regional cuisine, and Northeastern hospitality with the coastal backdrop of Canoa Quebrada. Between Cerapió stages, explore the protected historic streets and the colorful cliffs that made the destination famous worldwide.";
+
+  const cartoesInformacao = [
+    {
+      icone: Landmark,
+      titulo: language === "pt" ? "Centro Histórico & Arena Cerapió" : "Historic Center & Cerapió Arena",
+      descricao:
+        language === "pt"
+          ? "Casarões, igrejas e museus tombados convivem com a estrutura de credenciamento, parque fechado e boxes do rally."
+          : "Heritage-listed mansions, churches, and museums share space with the accreditation arena, parc fermé, and rally boxes.",
+      complemento:
+        language === "pt"
+          ? "Passeie durante o dia e retorne à noite para briefings, inspeções técnicas e serviços 24h."
+          : "Stroll by day and return at night for briefings, scrutineering, and 24/7 services.",
+    },
+    {
+      icone: Waves,
+      titulo: language === "pt" ? "Canoa Quebrada" : "Canoa Quebrada",
+      descricao:
+        language === "pt"
+          ? "Falésias coloridas, dunas e ventos constantes convidam a buggy, parapente, kitesurf e banhos de mar renovadores."
+          : "Colorful cliffs, dunes, and steady winds invite buggy rides, paragliding, kitesurfing, and refreshing ocean dips.",
+      complemento:
+        language === "pt"
+          ? "A Broadway concentra gastronomia, artesanato e a vida noturna que anima o pós-prova."
+          : "Broadway packs restaurants, crafts, and the nightlife that lights up the post-stage scene.",
+    },
+    {
+      icone: Car,
+      titulo: language === "pt" ? "Como Chegar" : "How to Get Here",
+      descricao:
+        language === "pt"
+          ? "150 km de Fortaleza (Aeroporto Pinto Martins) pelas rodovias CE-040 ou BR-304, além do acesso pela BR-304 para quem vem do Rio Grande do Norte."
+          : "150 km from Fortaleza's Pinto Martins Airport via CE-040 or BR-304, plus BR-304 access for those coming from Rio Grande do Norte.",
+      complemento:
+        language === "pt"
+          ? "Transfers oficiais e comboios guiados levam equipes e visitantes até Aracati e Canoa Quebrada com conforto." 
+          : "Official shuttles and guided convoys take teams and visitors to Aracati and Canoa Quebrada with ease.",
+    },
+  ];
+
   return (
     <section id="localizacao" className="section-padding relative">
       <div className="max-w-6xl mx-auto">
@@ -14,16 +60,14 @@ const LocationSection = () => {
           className="text-center mb-20"
         >
           <span className="text-primary font-sans text-sm tracking-[0.3em] uppercase mb-4 block">
-            Localização
+            {language === "pt" ? "Localização" : "Location"}
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
-            <span className="text-gold-gradient">Canoa Quebrada</span>
+            <span className="text-gold-gradient">Aracati &amp; Canoa Quebrada</span>
           </h2>
           <div className="gold-divider mb-8" />
           <p className="font-sans text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-            Um dos destinos mais encantadores do litoral cearense, conhecido por suas falésias 
-            avermelhadas, águas cristalinas e energia vibrante. O cenário perfeito para uma 
-            celebração inesquecível.
+            {descricaoLocal}
           </p>
         </motion.div>
 
@@ -57,53 +101,26 @@ const LocationSection = () => {
             transition={{ duration: 0.8 }}
             className="flex flex-col gap-6"
           >
-            <div className="glass-card p-6 flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-serif text-lg font-medium mb-2 text-foreground">
-                  Endereço do Evento
-                </h3>
-                <p className="font-sans text-muted-foreground text-sm leading-relaxed">
-                  Praia de Canoa Quebrada
-                  <br />
-                  Aracati, Ceará - Brasil
-                </p>
-              </div>
-            </div>
-
-            <div className="glass-card p-6 flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                <Plane className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-serif text-lg font-medium mb-2 text-foreground">
-                  Como Chegar
-                </h3>
-                <p className="font-sans text-muted-foreground text-sm leading-relaxed">
-                  Aeroporto Internacional Pinto Martins (FOR)
-                  <br />
-                  ~150km de Fortaleza (2h30 de carro)
-                </p>
-              </div>
-            </div>
-
-            <div className="glass-card p-6 flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                <Car className="w-5 h-5 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-serif text-lg font-medium mb-2 text-foreground">
-                  Transfer Exclusivo
-                </h3>
-                <p className="font-sans text-muted-foreground text-sm leading-relaxed">
-                  Oferecemos serviço de transfer saindo de Fortaleza.
-                  <br />
-                  Consulte disponibilidade na compra do ingresso.
-                </p>
-              </div>
-            </div>
+            {cartoesInformacao.map((cartao) => {
+              const Icone = cartao.icone;
+              return (
+                <div key={cartao.titulo} className="glass-card p-6 flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Icone className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-lg font-medium mb-2 text-foreground">
+                      {cartao.titulo}
+                    </h3>
+                    <p className="font-sans text-muted-foreground text-sm leading-relaxed">
+                      {cartao.descricao}
+                      <br />
+                      {cartao.complemento}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </motion.div>
         </div>
       </div>
