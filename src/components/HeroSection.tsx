@@ -61,9 +61,16 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          
           <a href="#sobre" className="btn-premium-outline">
             {t("hero.cta")}
+          </a>
+          <a
+            href="/pontocultural.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-premium"
+          >
+            {t("hero.ctaAracati")}
           </a>
         </motion.div>
       </div>

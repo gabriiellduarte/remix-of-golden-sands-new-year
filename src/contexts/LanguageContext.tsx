@@ -26,6 +26,7 @@ const translations = {
     "hero.title2": "Cerapió em Aracati",
     "hero.subtitle": "Guia oficial para equipes, pilotos e visitantes do Cerapió. Aracati, fundada no século XVIII, une centro histórico tombado, culinária regional e as falésias de Canoa Quebrada para receber você no litoral leste do Ceará.",
     "hero.cta": "Guia do Participante",
+    "hero.ctaAracati": "Conheça mais o Aracati",
     "hero.scrollText": "Role para se preparar",
     
     // About
@@ -126,6 +127,7 @@ const translations = {
     "hero.title2": "Cerapió in Aracati",
     "hero.subtitle": "Official guide for teams, riders, and visitors. Founded in the 18th century, Aracati blends a protected historic core, regional cuisine, and Canoa Quebrada's cliffs to welcome you on Ceará's east coast.",
     "hero.cta": "Participant Guide",
+    "hero.ctaAracati": "Learn more about Aracati",
     "hero.scrollText": "Scroll to get ready",
     
     // About
